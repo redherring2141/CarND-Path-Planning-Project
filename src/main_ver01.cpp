@@ -15,10 +15,9 @@
 
 // for convenience
 //using namespace std;
-//using nlohmann::json;
+using nlohmann::json;
 //using std::string;
 //using std::vector;
-using json = nlohmann::json;
 
 int main()
 {
@@ -275,9 +274,6 @@ int main()
             // Translate
             x_pt += x_pt_ref;
             y_pt += y_pt_ref;
-
-            std::cout << x_pt << std::endl;
-            std::cout << y_pt << std::endl;
 
             next_x_vals.push_back(x_pt);
             next_y_vals.push_back(y_pt);
