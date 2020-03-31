@@ -11,6 +11,7 @@
 //#include <cmath>
 #include <math.h>
 #include <thread>
+#include <chrono>
 #include "spline.h"
 
 // for convenience
@@ -227,7 +228,7 @@ int main()
             double xshift = xpts_curr[idx_pts] - x_ref;
             double yshift = ypts_curr[idx_pts] - y_ref;
             xpts_curr[idx_pts] = xshift * cos(0 - yaw_ref) - yshift * sin(0 - yaw_ref);
-            ypts_curr[idx_pts] = yshift * sin(0 - yaw_ref) + yshift * cos(0 - yaw_ref);
+            ypts_curr[idx_pts] = xshift * sin(0 - yaw_ref) + yshift * cos(0 - yaw_ref);
           }
 
           //std::cout << xpts_curr.size() << std::endl;
